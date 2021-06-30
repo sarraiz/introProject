@@ -1,13 +1,159 @@
 body, html {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.main-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.main-container .bckg-img {
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  width: 100%;
+}
+.main-container .bckg-color {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: #ff7a7a;
+  opacity: 0.85;
 }
 
 .container {
   max-width: 1280px;
   min-width: 375px;
+  height: 100%;
   margin: 0 auto;
+  position: relative;
+  z-index: 1000;
+}
+.container .left-cont {
+  float: left;
+  width: 40%;
+  height: 100%;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .left-cont h1 {
+  width: 100%;
+  margin: 0 0 20px 0;
+  font-size: 44px;
+  color: #ffffff;
+  line-height: 50px;
+}
+.container .left-cont p {
+  width: 100%;
+  color: #ffffff;
+  margin: 0;
+}
+.container .right-cont {
+  float: left;
+  width: 40%;
+  height: 100%;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container .right-cont button {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 5px 6px -1px rgba(51, 51, 51, 0.73);
+          box-shadow: 1px 5px 6px -1px rgba(51, 51, 51, 0.73);
+}
+.container .right-cont .try-button {
+  width: 110%;
+  display: block;
+  padding: 0;
+  background: #6055a5;
+  height: 45px;
+  border-radius: 5px;
+  border: inherit;
+  outline: inherit;
+  color: #ffffff;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.container .right-cont .try-button span {
+  font-weight: 700;
+}
+.container .right-cont form {
+  width: 100%;
+  background: #ffffff;
+  padding: 5%;
+  border-radius: 10px;
+}
+.container .right-cont form .form-inputs {
+  margin-bottom: 20px;
+}
+.container .right-cont form .form-inputs input {
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: block;
+  border: solid 1px #b9b6d3;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+.container .right-cont form .form-inputs input:last-child {
+  margin-bottom: 0;
+}
+.container .right-cont form .form-inputs input:hover, .container .right-cont form .form-inputs input:active, .container .right-cont form .form-inputs input:before, .container .right-cont form .form-inputs input:after, .container .right-cont form .form-inputs input:focus {
+  border: solid 1px #6055a5;
+}
+.container .right-cont form .trail-button {
+  width: 101%;
+  display: block;
+  padding: 0;
+  background: #38cc8c;
+  height: 45px;
+  border-radius: 5px;
+  border: inherit;
+  outline: inherit;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.container .right-cont form p {
+  width: 100%;
+  margin: 0;
+  font-size: 10px;
+  color: #b9b6d3;
+  text-align: center;
+}
+.container .right-cont form p a {
+  color: #ff7a7a;
 }
 
 /*****Mediaqueries******/
