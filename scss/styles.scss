@@ -1,5 +1,6 @@
 
 $full-width:100%;
+$full-width-mobile:90%/*100%*/;
 $full-width-form:90%/*100%*/;
 $max-width:1280px;
 $min-width:375px;
@@ -17,7 +18,9 @@ $overflow-hidden:hidden;
 $containers-width:40%/*50%*/;
 
 
-
+.mobile {
+    display:none;
+}
 
 body, html {
     width:$full-width;
@@ -28,7 +31,7 @@ body, html {
     font-size:16px;
 }
 .main-container {
-    position:relative;
+    position:$position-relative;
     height:100%;
     overflow:$overflow-hidden;
     & .bckg-img {
@@ -163,10 +166,61 @@ body, html {
 /*****Mediaqueries******/
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
+    
     body, html {
-        width:100%;
-        margin:0;
-        padding:0;
+        height:inherit;
+    }
+    .mobile {
+        display:block;
+    }
+    .desktop {
+        display:none;
+    }
+    .main-container {
+        overflow:hidden;
+        position:inherit;
+        & .bckg-img {
+            height:$height;
+            & img {
+                height:100%;
+            }
+        }
+        & .bckg-color {
+            height:100%;
+        }
+    }
+    .container {
+        width:75%/*100%*/;
+        padding:12% 5% 12% 5%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction:column;
+        & .left-cont {
+            float:inherit;
+            width:100%;
+            height:inherit;
+            display:inherit;
+            align-items:inherit;
+            justify-content:inherit;
+            flex-direction:inherit;
+            margin-bottom:30px;
+            & h1 {
+                text-align: center;
+            }
+            & p {
+                text-align: center;
+            }
+        }
+        & .right-cont {
+            float:inherit;
+            width:100%;
+            height:inherit;
+            display:inherit;
+            align-items:inherit;
+            justify-content:inherit;
+            flex-direction:inherit;
+        }
     }
 }
     
