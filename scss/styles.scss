@@ -1,4 +1,26 @@
 
+$max-width:1280px;
+$min-width:375px;
+$red:hsl(0, 100%, 74%);
+$green:hsl(154, 59%, 51%);
+$blue:hsl(248, 32%, 49%);
+$dark-blue:hsl(249, 10%, 26%);
+$grayish-blue:hsl(246, 25%, 77%);
+$margin-center:0 auto;
+
+
+
+
+body, html {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.container {
+    max-width:$max-width;
+    min-width:$min-width;
+    margin:$margin-center;
+}
 
 
 
@@ -8,7 +30,9 @@
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
     body, html {
-    height:100%;
-  }
+        width:100%;
+        margin:0;
+        padding:0;
+    }
 }
     
